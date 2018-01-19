@@ -1,5 +1,5 @@
 # code your #valid_move? method here
-def valid_move(index)
+def valid_move?(board, index)
   if position_taken == false
     return false
   else position_taken == true
@@ -9,7 +9,7 @@ end
 
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
-def position_taken(board, index)
+def position_taken?(board, index)
   if board[array] == " " || board[array] == ""
     return false
   elsif board[array] == nil
