@@ -2,11 +2,9 @@ board = Array.new(9, " ")
 
 # code your #valid_move? method here
 def valid_move?(board, index)
-  if position_taken?(board, index) == false && index.between?(1, 9)
+  if position_taken?(board, index) == false && index.between?(1..8) == false
     return truthy
   else position_taken?(board, index) == true
-    return falsey
-  elsif index != 1..9
     return falsey
   end
 end
