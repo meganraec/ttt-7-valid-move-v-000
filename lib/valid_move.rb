@@ -10,7 +10,7 @@ def valid_move?(board, index)
     return nil
   elsif position_taken?(board, index) == true
     return false
-  else 
+  else
     return true
 
   end
@@ -25,11 +25,10 @@ def position_taken?(board, index)
     return nil
   elsif board[index] == "X" || board[index] == "O"
     return true
-  else 
+  else
     return false
   end
 end
 
 index = 0
 index = 5
-
