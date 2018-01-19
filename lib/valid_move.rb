@@ -1,4 +1,4 @@
-board = Array.new(9, " ")
+#board = Array.new(9, " ")
 
 # code your #valid_move? method here
 def valid_move?(board, index)
@@ -17,7 +17,7 @@ def position_taken?(board, index)
   if board[index] == " " || board[index] == ""
     return false
   elsif board[index] == nil
-    return nil
+    return false
   elsif board[index] == "X" || board[index] == "O"
     return true
   else
@@ -25,4 +25,6 @@ def position_taken?(board, index)
   end
 end
 
-#valid_move([], 0)
+#valid_move(board, 0)
+
+
