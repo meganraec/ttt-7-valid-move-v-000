@@ -4,7 +4,7 @@ board = Array.new(9, " ")
 def valid_move?(board, index)
   if position_taken?(board, index) == false && index.between?(1..8) == false
     return false
-  elsif position_taken?(board_index) == false && index.between?(1..8) == true
+  elsif position_taken?(board, index) == false && index.between?(1..8) == true
     return true
   else position_taken?(board, index) == true
     return false
@@ -14,11 +14,11 @@ end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 def position_taken?(board, index)
-  if board[array] == " " || board[array] == ""
+  if board[index] == " " || board[index] == ""
     return false
-  elsif board[array] == nil
+  elsif board[index] == nil
     return false
-  else board[array] == "X" || board[array] == "O"
+  else board[index] == "X" || board[index] == "O"
     return true
   end
 end
